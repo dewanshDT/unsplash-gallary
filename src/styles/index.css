@@ -4,4 +4,7 @@
   font-family: inherit;
   color: inherit;
   box-sizing: border-box;
+  font-family: "Oswald";
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500;600&display=swap");

@@ -1,6 +1,7 @@
 import axios, { AxiosResponse } from "axios"
 import React, { useEffect, useState } from "react"
 import CardList from "./components/CardList"
+import Header from "./components/Header"
 import "./styles/App.css"
 
 export interface Image {
@@ -9,6 +10,7 @@ export interface Image {
   downloadURL: string
   likes: number
   user: {
+    url: string
     profileImageURL: string
     name: string
   }
@@ -32,16 +34,21 @@ const App: React.FC = () => {
           urls: { regular: string }
           likes: number
           links: { download: string }
-          user: { profile_image: { small: string }; name: string }
+          user: {
+            links: { self: string }
+            profile_image: { small: string }
+            name: string
+          }
         }) => {
           const newImage: Image = {
-            id: img?.id,
-            url: img?.urls?.regular,
-            likes: img?.likes,
-            downloadURL: img?.links?.download,
+            id: img.id,
+            url: img.urls.regular,
+            likes: img.likes,
+            downloadURL: img.links.download,
             user: {
-              profileImageURL: img?.user?.profile_image?.small,
-              name: img?.user?.name,
+              url: img.user.links.self,
+              profileImageURL: img.user.profile_image.small,
+              name: img.user.name,
             },
           }
           return newImage
@@ -59,7 +66,8 @@ const App: React.FC = () => {
   }, [])
 
   return (
-    <div className="app">
+    <div className="App">
+      <Header getRandomImages={getRandomImages} />
       <CardList images={images} />
     </div>
   )

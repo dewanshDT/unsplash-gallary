@@ -10,7 +10,7 @@ const CardList: React.FC<Props> = ({ images }) => {
   return (
     <div className="card-list">
       {images.map((img: Image) => (
-        <Card image={img} />
+        <Card image={img} key={img.id} />
       ))}
     </div>
   )

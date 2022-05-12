@@ -1,0 +1,145 @@
+:root {
+  --color-neutral-100: #ffffff;
+  --color-neutral-200: #ffffffbb;
+  --color-neutral-300: #ffffff7b;
+  --color-neutral-500: #353535;
+  --color-neutral-600: #181818;
+  --color-neutral-800: #0a3820;
+  --color-neutral-900: #000000;
+
+  --font-size-200: 0.75rem;
+  --font-size-300: 0.975rem;
+  --font-size-400: 1.125rem;
+  --font-size-500: 1.25rem;
+  --font-size-600: 1.75rem;
+  --font-size-700: 3rem;
+
+  --space-100: 0.5rem;
+  --space-200: 0.7rem;
+  --space-300: 1rem;
+  --space-400: 1.5rem;
+  --space-500: 3rem;
+  --space-600: 6rem;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.App {
+  height: 100vh;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  color: var(--color-neutral-900);
+  background: linear-gradient(to bottom, #a1ffce, #faffd1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-200);
+  color: var(--color-neutral-800);
+  padding: var(--space-300) var(--space-500);
+}
+
+.header h1 {
+  font-family: "Oswald";
+  font-weight: 600;
+}
+
+.header button {
+  padding: 0.3em 0.7em;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-neutral-100);
+  border: none;
+  border-radius: 0.3em;
+  font-size: var(--font-size-400);
+  cursor: pointer;
+  transition: transform 200ms ease;
+}
+
+.header button:hover {
+  transform: scale(0.9);
+}
+
+.card-list {
+  display: flex;
+  height: 100%;
+  padding: 0 var(--space-500);
+  overflow-x: auto;
+}
+
+.card {
+  margin: var(--space-300);
+  border-radius: 1rem;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  height: 68vh;
+  background-color: var(--color-neutral-100);
+  box-shadow: 52px 51px 80px -34px #00000072;
+  cursor: default;
+}
+
+.image {
+  width: auto;
+  height: 80%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.card .info {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  padding: var(--space-100) var(--space-300);
+}
+
+.profile-image {
+  border-radius: 50%;
+  height: var(--space-500);
+  width: var(--space-500);
+  overflow: hidden;
+  margin-right: var(--space-200);
+}
+
+.profile-image img {
+  width: 100%;
+}
+
+.info .name {
+  font-size: var(--font-size-400);
+  font-weight: 500;
+  color: var(--color-neutral-600);
+}
+
+.info .likes {
+  font-size: var(--font-size-300);
+  color: var(--color-neutral-500);
+}
+
+.btn-circle {
+  height: var(--space-500);
+  width: var(--space-500);
+  padding: 0.75em;
+  color: var(--color-neutral-800);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  transition: transform 200ms ease;
+}
+
+.btn-circle:hover {
+  transform: scale(0.8);
+}
