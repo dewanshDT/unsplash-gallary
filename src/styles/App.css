@@ -1,8 +1,9 @@
 :root {
   --color-neutral-100: #ffffff;
-  --color-neutral-200: #ffffffbb;
-  --color-neutral-300: #ffffff7b;
-  --color-neutral-500: #353535;
+  --color-neutral-200: #faffd1;
+  --color-neutral-300: #a1ffce;
+  --color-neutral-400: #3535352d;
+  --color-neutral-500: #404040;
   --color-neutral-600: #181818;
   --color-neutral-800: #0a3820;
   --color-neutral-900: #000000;
@@ -32,6 +33,7 @@
 }
 
 .App {
+  position: relative;
   height: 100vh;
   overflow-x: auto;
   display: flex;
@@ -67,6 +69,10 @@
   transition: transform 200ms ease;
 }
 
+.header button svg {
+  margin: 0 auto;
+}
+
 .header button:hover {
   transform: scale(0.9);
 }
@@ -76,12 +82,14 @@
   height: 100%;
   padding: 0 var(--space-500);
   overflow-x: auto;
+  background: none;
+  position: relative;
 }
 
 .card {
   margin: var(--space-300);
   border-radius: 1rem;
-  width: auto;
+  width: max-content;
   display: flex;
   flex-direction: column;
   height: 68vh;
@@ -142,4 +150,44 @@
 
 .btn-circle:hover {
   transform: scale(0.8);
+}
+
+.btn-menue {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  transform: translate(-50%, 0%);
+  bottom: 2%;
+  left: 50%;
+}
+
+.btn-menue .right,
+.btn-menue .left {
+  padding: 0.1em;
+  font-size: 3rem;
+}
+
+.btn-menue svg {
+  background: var(--color-neutral-100);
+  color: var(--color-neutral-800);
+  margin: 0.01em;
+  border-radius: 0.1em;
+  width: var(--space-500);
+  height: var(--space-500);
+  background-color: var(--color-neutral-400);
+  cursor: pointer;
+}
+
+.btn-menue.right,
+.btn-menue.left {
+  transition: all 200ms ease;
+}
+
+.btn-menue .right:hover,
+.btn-menue .left:hover {
+  transform: scale(0.9);
+}
+
+.btn-menue .right svg {
+  transform: rotateZ(180deg);
 }

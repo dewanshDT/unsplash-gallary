@@ -10,7 +10,11 @@ const Card: React.FC<Props> = ({ image }) => {
     <div className="card">
       <img src={image.url} className="image" />
       <div className="info">
-        <a href={image.user.url}>
+        <a
+          href={`https://www.instagram.com/${image.user.instagram}`}
+          target="_blank"
+          rel="noreferrer"
+        >
           <div className="profile-image">
             <img src={image.user.profileImageURL} />
           </div>
