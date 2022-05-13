@@ -8,7 +8,10 @@ interface Props {
 const Card: React.FC<Props> = ({ image }) => {
   return (
     <div className="card">
-      <img src={image.url} className="image" />
+      <div className="image">
+        <img src={image.url} />
+        <div className="placeholder"></div>
+      </div>
       <div className="info">
         <a
           href={`https://www.instagram.com/${image.user.instagram}`}

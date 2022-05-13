@@ -27,7 +27,7 @@ const App: React.FC = () => {
     const random = Math.floor(Math.random() * 10) + 3
     try {
       const res: AxiosResponse = await axios.get(
-        `https://api.unsplash.com/photos/random?count=${random}&client_id=MrsptAEkuNtiOj9sakWFD9PmsE7roU5qo4Zub6CQgSk&client_secret=F19zKmUGoRQy1QY-FfEodfvh6jKPORIaDZLM7GHL_Nw`
+        `https://api.unsplash.com/photos/random?orientation=portrait&count=${random}&client_id=MrsptAEkuNtiOj9sakWFD9PmsE7roU5qo4Zub6CQgSk&client_secret=F19zKmUGoRQy1QY-FfEodfvh6jKPORIaDZLM7GHL_Nw`
       )
       console.log(res.data)
       const imageArr = res.data?.map(
@@ -57,9 +57,7 @@ const App: React.FC = () => {
         }
       )
       setImages(imageArr)
-      setTimeout(() => {
-        setLoading(false)
-      }, 1000)
+      setLoading(false)
     } catch (error) {
       console.log(error)
     }
