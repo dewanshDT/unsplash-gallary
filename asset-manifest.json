@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/unsplash-gallery/static/css/main.763cc1c6.css",
-    "main.js": "/unsplash-gallery/static/js/main.86a98f7d.js",
+    "main.css": "/unsplash-gallery/static/css/main.b18a283d.css",
+    "main.js": "/unsplash-gallery/static/js/main.e67f97fb.js",
     "index.html": "/unsplash-gallery/index.html",
-    "main.763cc1c6.css.map": "/unsplash-gallery/static/css/main.763cc1c6.css.map",
-    "main.86a98f7d.js.map": "/unsplash-gallery/static/js/main.86a98f7d.js.map"
+    "main.b18a283d.css.map": "/unsplash-gallery/static/css/main.b18a283d.css.map",
+    "main.e67f97fb.js.map": "/unsplash-gallery/static/js/main.e67f97fb.js.map"
   },
   "entrypoints": [
-    "static/css/main.763cc1c6.css",
-    "static/js/main.86a98f7d.js"
+    "static/css/main.b18a283d.css",
+    "static/js/main.e67f97fb.js"
   ]
 }
