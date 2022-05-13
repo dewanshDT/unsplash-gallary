@@ -2,7 +2,7 @@
   "name": "unsplash-gallery",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dewanshhDT.github.io/unsplash-gallery",
+  "homepage": "https://dewanshdt.github.io/unsplash-gallary/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
